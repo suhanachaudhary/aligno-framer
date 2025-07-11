@@ -64,8 +64,11 @@ const TeamSection = () => {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-full h-[300px] object-cover rounded-t-3xl rounded-b-none shadow-[inset_0_-80px_80px_-10px_rgba(0,0,0,0.8)]"
+                className="w-full h-[300px] object-cover rounded-t-3xl"
               />
+
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+
               {/* <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-sm border m-1 rounded-xl"> */}
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-sm border-t border-l border-r border-[#333] shadow-[0_10px_30px_rgba(0,0,0,0.5)] m-1 rounded-t-xl">
 

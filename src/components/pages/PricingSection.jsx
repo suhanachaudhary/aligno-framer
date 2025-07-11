@@ -18,7 +18,7 @@ const PricingSection = () => {
     };
   return (
     <>
-        <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
+        <div className=" relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
         <h1 className="text-3xl md:text-5xl font-semibold mb-2 text-center">
             Choose the <span className="italic">Right Plan</span> for <br className="md:hidden" /> Your Team
         </h1>
@@ -129,6 +129,7 @@ const PricingSection = () => {
 
       
         <div className="relative z-10 text-center">
+          <div className="absolute top-0 right-0 w-[500px] h-[300px] bg-[#093FB4] opacity-20 blur-[120px] z-0"></div>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Ready to manage your <br></br> <br className="md:hidden" /> team like a pro?
           </h2>
@@ -140,7 +141,9 @@ const PricingSection = () => {
           </button>
         </div>
       </div>
+      <div className="absolute top-0 left-[50%] w-[500px] h-[300px] bg-[#093FB4] opacity-20 blur-[120px] z-0"></div>
       </div>
+      <div className="absolute top-0 right-0 w-[500px] h-[300px] bg-[#093FB4] opacity-20 blur-[120px] z-0"></div>
     </>    
   );
 };

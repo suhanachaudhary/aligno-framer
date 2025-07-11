@@ -50,3 +50,102 @@ html {
 .animate-scroll-up {
   animation: scrollUp 5s linear infinite;
 }
+
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-bubble {
+  animation-name: bubble;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes buttonBubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(-20px) scale(1.2);
+  }
+  100% {
+    transform: translateY(-40px) scale(1.2);
+    opacity: 0;
+  }
+}
+.animate-buttonBubble {
+  animation-name: buttonBubble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.btn:hover{
+  color: #fff;
+  font-weight: 700;
+  z-index: 1000;
+  box-shadow: 4px 4px 4px #0D5EA6;
+  border: 2px solid #042543;
+}
+
+
+
+
+
+@keyframes scroll-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scroll-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50%); }
+}
+
+.scroll-up {
+  animation: scroll-up 25s linear infinite;
+}
+
+.scroll-down {
+  animation: scroll-down 25s linear infinite;
+}
+
+
+
+
+.logo-hover {
+  transition: transform 0.8s ease;
+  /* transform-style: preserve-3d; */
+}
+.logo-hover:hover {
+  transform: rotateY(180deg);
+}
+@keyframes rotateYOnce {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    /* transform: rotateX(90deg); */
+    transform: rotateY(-90deg);
+  }
+}
+
+.rotate-y-hover:hover {
+  animation: rotateYOnce 0.7s ease forwards;
+  transform-style: preserve-3d;
+}
+
+
+
