@@ -59,22 +59,27 @@ const Footer = () => {
             Sign up to our mailing list below and be the first to know about new updates. Don’t worry, we hate spam too.
           </p>
           <div className="flex items-center rounded-full overflow-hidden max-w-md">
-            <input
-              type="email"
-              placeholder="Your Email Address"
-              className="px-6 py-2 bg-[#181818] text-sm w-full h-[50px] outline-none text-white placeholder-gray-400"
-            />
-            <button className="bg-[#093FB4] text-white px-6 h-[50px] py-2 text-sm font-medium">
-              Get Notified
-            </button>
+            <div className="flex items-center rounded-full overflow-hidden max-w-md">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="px-4 w-1/2 py-2 bg-[#181818] text-sm w-full h-[50px] outline-none text-white placeholder-gray-400"
+              />
+              {/* <button className="bg-[#093FB4] text-white px-6 h-[50px] py-2 text-sm font-medium">
+                Get Notified
+              </button> */}
+            </div>
+            <button className="bg-[#093FB4] rounded-full w-[130px] text-white h-[50px] py-2 text-sm font-medium ml-2">
+                Get Notified
+              </button>
           </div>
-        </div>
+      </div>
       </div>
 
       {/* Bottom Copyright */}
       <div className="relative z-10 text-center text-sm text-gray-500 mt-5">
         <hr className="w-full md:px-[-200px] border-t border-gray-900"></hr>
-        <p className="mt-4">© 2025 Aligno All rights reserved</p>
+        <p className="mt-4">© 2025 Corazor All rights reserved</p>
       </div>
     </footer>
   );

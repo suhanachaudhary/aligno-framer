@@ -18,21 +18,21 @@ const testimonials = [
     name: "Samantha Lee",
     company: "BrightStart Studios",
     feedback:
-      "Aligno's customizable features made it the perfect fit for our growing business.",
+      "Corazor's customizable features made it the perfect fit for our growing business.",
     avatar: "https://i.pravatar.cc/150?img=47",
   },
   {
     name: "Olivia Turner",
     company: "DesignHub",
     feedback:
-      "Aligno's user-friendly interface helped our team get started quickly, no learning curve!",
+      "Corazor's user-friendly interface helped our team get started quickly, no learning curve!",
     avatar: "https://i.pravatar.cc/150?img=49",
   },
   {
     name: "Jonathan Reed",
     company: "TechWorks",
     feedback:
-      "Aligno has simplified project management for us—everything we need in one place!",
+      "Corazor has simplified project management for us—everything we need in one place!",
     avatar: "https://i.pravatar.cc/150?img=33",
   },
   {
@@ -46,7 +46,7 @@ const testimonials = [
     name: "Liam Cooper",
     company: "InnovateX",
     feedback:
-      "Aligno's sprint management tools made tracking our progress effortless!",
+      "Corazor's sprint management tools made tracking our progress effortless!",
     avatar: "https://i.pravatar.cc/150?img=29",
   },
   {
@@ -74,21 +74,21 @@ const testimonials = [
     name: "Samantha Lee",
     company: "BrightStart Studios",
     feedback:
-      "Aligno's customizable features made it the perfect fit for our growing business.",
+      "Corazor's customizable features made it the perfect fit for our growing business.",
     avatar: "https://i.pravatar.cc/150?img=47",
   },
   {
     name: "Olivia Turner",
     company: "DesignHub",
     feedback:
-      "Aligno's user-friendly interface helped our team get started quickly, no learning curve!",
+      "Corazor's user-friendly interface helped our team get started quickly, no learning curve!",
     avatar: "https://i.pravatar.cc/150?img=49",
   },
   {
     name: "Jonathan Reed",
     company: "TechWorks",
     feedback:
-      "Aligno has simplified project management for us—everything we need in one place!",
+      "Corazor has simplified project management for us—everything we need in one place!",
     avatar: "https://i.pravatar.cc/150?img=33",
   },
 ];
@@ -243,7 +243,7 @@ export default function Why() {
               <i>Effortless</i> <strong>Task Management</strong>
             </h3>
             <p className="text-sm text-gray-400">
-              Keep all your tasks organized and visible in one place. Aligno helps you assign, track, and prioritize tasks easily, ensuring nothing falls through the cracks.
+              Keep all your tasks organized and visible in one place. Corazor helps you assign, track, and prioritize tasks easily, ensuring nothing falls through the cracks.
             </p>
           </div>
 
@@ -270,7 +270,7 @@ export default function Why() {
               <i>Seamless</i> <strong>Team Collaboration</strong>
             </h3>
             <p className="text-sm text-gray-400">
-              Work together with your team in real time, no matter where they are. Aligno’s collaborative tools make it easy to communicate, share files, and keep everyone in sync.
+              Work together with your team in real time, no matter where they are. Corazor’s collaborative tools make it easy to communicate, share files, and keep everyone in sync.
             </p>
           </div>
 
@@ -299,7 +299,7 @@ export default function Why() {
               <i>Comprehensive</i> <strong>Project Insights</strong>
             </h3>
             <p className="text-sm text-gray-400">
-              Stay on top of your projects with advanced analytics and reporting. Aligno gives you the insights you need to make data-driven decisions and improve overall efficiency.
+              Stay on top of your projects with advanced analytics and reporting. Corazor gives you the insights you need to make data-driven decisions and improve overall efficiency.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function Why() {
               Smart <i>Deadline</i> <strong>Tracking</strong>
             </h3>
             <p className="text-sm text-gray-400">
-              Never miss a deadline again! Aligno automatically tracks due dates, sends timely reminders, and keeps your team on schedule with seamless progress updates.
+              Never miss a deadline again! Corazor automatically tracks due dates, sends timely reminders, and keeps your team on schedule with seamless progress updates.
             </p>
           </div>
 
