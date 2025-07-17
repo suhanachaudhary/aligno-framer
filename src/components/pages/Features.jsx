@@ -59,7 +59,7 @@ const Features = () => {
   return (
     <section className="bg-black text-white px-4 py-6">
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <div className="absolute top-[240%] right-0 w-[500px] h-[300px] bg-[#0D5EA6] opacity-20 blur-[120px] z-0"></div>
+        <div className="absolute top-[240%] right-0 w-[500px] h-[300px] bg-[#093FB4] opacity-20 blur-[120px] z-0"></div>
         <h2 className="text-4xl md:text-5xl font-light italic">
           Save <span className="font-semibold not-italic">time</span> and <span className="font-semibold not-italic">get more<br></br> done</span>
         </h2>
@@ -69,12 +69,9 @@ const Features = () => {
       </div>
 
 
-      <div className="absolute top-[300%] left-0 w-[500px] h-[300px] bg-[#0D5EA6] opacity-20 blur-[120px] z-0"></div>
+      <div className="absolute top-[300%] left-0 w-[500px] h-[300px] bg-[#093FB4] opacity-20 blur-[120px] z-0"></div>
       <FeatureSection />
-
-
-
-      <div className="bg-black text-white py-2 px-4 text-center" style={{ marginTop: "-30px" }}>
+      <div className="bg-black text-white py-2 px-4 text-center" style={{ marginTop: "-140px" }}>
 
         <div ref={ref} className="text-3xl md:text-5xl font-medium leading-snug">
           <div className="flex flex-wrap justify-center items-center">

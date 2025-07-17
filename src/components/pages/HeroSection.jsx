@@ -1,9 +1,8 @@
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useAnimation, useScroll, useTransform, useSpring } from "framer-motion";
+import { useAnimation, useScroll, useTransform, useSpring } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Marquee from "react-fast-marquee";
-import AlignoDashboard from "./LightEffect";
+import Dashboard1 from "./Dashboard1";
 
 const HeroSection = () => {
 
@@ -185,20 +184,10 @@ const HeroSection = () => {
 
       </div>
 
-      <div className="absolute top-0 left-0 w-[700px] h-[400px] bg-[#0D5EA6] opacity-20 blur-[150px] z-0"></div>
+      <div className="absolute top-0 left-0 w-[700px] h-[400px] bg-[#093FB4] opacity-20 blur-[150px] z-0"></div>
 
 
-      <div className="relative z-20 flex flex-col items-center justify-center text-center px-6 pt-12 pb-20 mt-8">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)
-          `,
-            backgroundSize: '50px 50px'
-          }}
-        />
+      <div className="relative z-20 flex flex-col items-center justify-center text-center px-6 pt-12 pb-0 mt-8">
 
         <div
           className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px opacity-60"
@@ -222,30 +211,10 @@ const HeroSection = () => {
         />
 
         <div
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-20"
+          className="absolute top-0 left-[98%] transform -translate-x-1/2 opacity-15"
           style={{
-            width: '200px',
-            height: '60vh',
-            background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 30%)',
-            clipPath: 'polygon(49% 0%, 51% 0%, 60% 100%, 40% 100%)',
-            animation: 'lightBeamPulse 4s ease-in-out infinite 1s'
-          }}
-        />
-
-        <div
-          className="absolute top-0 left-[54%] w-[120px]  mt-6 transform -translate-x-1/2 w-8 h-10 opacity-80"
-          style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 168, 168, 0.6) 30%, rgba(255, 224, 102, 0.4) 60%, transparent 100%)',
-            filter: 'blur(4px)',
-            animation: 'lightSourcePulse 2s ease-in-out infinite'
-          }}
-        />
-
-        <div
-          className="absolute top-0 left-[105%] transform -translate-x-1/2 opacity-15"
-          style={{
-            width: '1500px',
-            height: '85vh',
+            width: '1300px',
+            height: '80vh',
             background: 'linear-gradient(to bottom, rgba(0, 212, 255, 0.2) 0%, rgba(79, 195, 247, 0.1) 30%, transparent 60%)',
             clipPath: 'polygon(42% 0%, 58% 0%, 75% 100%, 25% 100%)', // wider torch shape
             filter: 'blur(6px)', // stronger blur for softness
@@ -254,25 +223,12 @@ const HeroSection = () => {
         />
         <div className="relative z-10 text-center">
           <div className="relative">
-            <div
-              className="absolute top-1/2 left-1/2 w-full h-full transform -translate-x-1/2 -translate-y-1/2 rounded-full animate-pulse"
-              style={{
-                width: '150%',
-                height: '150%',
-                background: `radial-gradient(
-                ellipse at center,
-                rgba(255, 107, 107, 0.3) 0%,
-                rgba(255, 168, 168, 0.2) 30%,
-                rgba(255, 224, 102, 0.1) 60%,
-                transparent 80%
-              )`
-              }}
-            />
+
             <div className="relative z-[5]">
-              <div className="text-xl text-[#0D5EA6] mb-4 mt-24">✨ New AI Feature</div>
+              <div className="text-xl text-[#0D5EA6] mb-4 mt-11">✨ New AI Feature</div>
 
               <h1
-                className="text-6xl md:text-8xl lg:text-9xl font-bold relative z-10"
+                className="text-4xl md:text-8xl font-bold relative z-10"
                 style={{
                   background: 'linear-gradient(45deg, #00d4ff, #4fc3f7, #b3e5fc, #4fc3f7, #00d4ff)',
                   backgroundSize: '300% 300%',
@@ -286,25 +242,37 @@ const HeroSection = () => {
                 Corazor
               </h1>
 
-
-              {/* <div
-                className="absolute top-0 left-0 w-full h-full text-6xl md:text-8xl lg:text-9xl font-bold blur-sm opacity-70 -z-10"
-                style={{
-                  background: 'linear-gradient(45deg, #ff6b6b, #ffa8a8, #ffe066, #ff9f43, #ff6b6b)',
-                  backgroundSize: '300% 300%',
-                  WebkitBackgroundClip: 'text',
-                  backgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  animation: 'gradientShift 3s ease-in-out infinite'
-                }}
-              >
-                Corazor
-              </div> */}
-              <p className="text-md mt-2 md:text-lg max-w-xl text-gray-300 mb-8">
+              <p className="mt-6 text-xl text-center text-gray-300 mb-4">
                 Prioritise What Matters - Streamline Your<br />
                 Workflow and Focus on What Drives<br />
                 Success!
               </p>
+              {/* Buy Template Button */}
+              <button className="relative bg-blue-900 hover:bg-gray-900 border-2 border-blue-500 text-white px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:border-blue-400 overflow-hidden group">
+                <span className="relative z-10">Buy Template</span>
+
+                {/* Bubble animations */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {[...Array(500)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute rounded-full bg-gradient-to-r from-blue-400 to-blue-300"
+                      style={{
+                        width: `${4 + Math.random() * 8}px`,
+                        height: `${4 + Math.random() * 8}px`,
+                        left: `${Math.random() * 100}%`,
+                        top: `${Math.random() * 100}%`,
+                        animation: `bubble-float-${i % 3} ${1.5 + Math.random() * 2}s ease-in-out infinite`,
+                        animationDelay: `${Math.random() * 2}s`,
+                      }}
+                    />
+                  ))}
+                </div>
+              </button>
+              <div className="mt-[-60px]">
+                <Dashboard1 />
+              </div>
+
             </div>
           </div>
         </div>
@@ -364,111 +332,25 @@ const HeroSection = () => {
         }
       `}</style>
 
-
-
-        {/* <div className="relative z-[5]">
-          <div className="text-xl text-[#0D5EA6] mb-4 mt-24">✨ New AI Feature</div>
-          <h1 className="text-6xl md:text-9xl font-bold tracking-tight text-[#0D5EA6] mb-4">
-            Corazor
-          </h1>
-          <p className="text-md mt-2 md:text-lg max-w-xl text-gray-300 mb-8">
-            Prioritise What Matters - Streamline Your<br />
-            Workflow and Focus on What Drives<br />
-            Success!
-          </p>
-        </div> */}
-
-
-        <div className="relative group inline-block overflow-hidden rounded-full hover:shadow-[inset_0_0_20px_#0B1D51]" style={{ marginBottom: "-50px" }}>
-          <button className="btn relative z-10 border border-white text-white px-6 py-2 rounded-full bg-gradient-to-r from-[#0D5EA6] to-[#093FB4] hover:opacity-50 transition">
-            Buy Template
-          </button>
-
-          {[...Array(100)].map((_, i) => {
-            const size = Math.random() < 0.5 ? 6 : 8;
-            const colors = ["#ffffff", "#0D5EA6", "#5AD2F4"];
-            const color = colors[Math.floor(Math.random() * colors.length)];
-
-            return (
-              <span
-                key={i}
-                className="absolute rounded-full animate-buttonBubble"
-                style={{
-                  width: `${size}px`,
-                  height: `${size}px`,
-                  backgroundColor: color,
-                  border: "1px solid white",
-                  left: `${Math.random() * 100}%`,
-                  bottom: `${Math.random() * 20}px`,
-                  opacity: 0.9,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${3 + Math.random() * 2}s`,
-                  boxShadow: `0 0 10px ${color}`,
-                  filter: `blur(0.2px)`,
-                }}
-              />
-            );
-          })}
-
-        </div>
-
-
-        {/* 
-        <button className="border border-white text-white px-6 py-2 rounded-full bg-gradient-to-r mt-6 from-[#0D5EA6] to-[#093FB4] hover:opacity-90 transition" style={{marginBottom:"-50px"}}>
-          Buy Template
-        </button> */}
       </div>
 
-      <div className="absolute top-[1%] left-0 w-[300px] h-[300px] bg-[#0D5EA6] opacity-20 blur-[130px] z-0"></div>
+      {/* <div className="absolute top-[1%] left-0 w-[300px] h-[300px] bg-[#093FB4] opacity-20 blur-[130px] z-0"></div> */}
 
-      <div className="absolute top-[50%] left-[50%] w-[300px] h-[500px] bg-[#0D5EA6] opacity-20 blur-[130px] z-0"></div>
-      {/* <div className="absolute top-[80%] right-0 w-[300px] h-[300px] bg-[#0D5EA6] opacity-20 blur-[130px] z-0"></div> */}
-
-      {/* 
-      <motion.div
-        ref={ref}
-        initial={{ rotateX: 180,rotateY:0, rotateZ:360, scale: 0.8 }}
-        animate={controls}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative z-10 max-w-6xl mx-auto px-6"
-        stye={{marginTop:"-80px"}}
-      >
-        <img
-          src="/images/hero13.jpg"
-          alt="Aligno Dashboard"
-          className="w-full h-[600px] rounded-lg shadow-2xl border border-white/10"
-        />
-      </motion.div> */}
+      {/* <div className="absolute top-[50%] left-[50%] w-[300px] h-[500px] bg-[#093FB4] opacity-20 blur-[130px] z-0"></div>
+      <div className="absolute top-[80%] right-0 w-[300px] h-[300px] bg-[#093FB4] opacity-20 blur-[130px] z-0"></div> */}
 
 
-      <motion.div
-        ref={ref1}
-        style={{
-          rotateX: smoothRotateX,
-          perspective: 1000,
-        }}
-        className="relative z-10 max-w-6xl mx-auto px-6"
-      >
-        <AlignoDashboard />
-      </motion.div>
-
-
-
-
-      <div className="bg-black text-white py-10 overflow-hidden" style={{ margin: "10px 200px" }}>
-
-        <div className="relative flex justify-center items-center">
-
-          <div className="absolute top-[20%] left-0 w-[700px] h-[130px] bg-[##0D5EA6] opacity-20 blur-[150px] z-0"></div>
-
-          <p style={{ fontWeight: "700" }} className="text-center text-[#0D5EA6] text-xl mb-4 relative z-10">
+      <div className="bg-black text-white py-10 overflow-hidden" style={{ marginTop: "-200px" }}>
+        <div className="relative flex justify-center">
+          {/* <div className="absolute top-[20%] left-0 w-[700px] h-[130px] bg-[#093FB4] opacity-20 blur-[150px] z-0"></div> */}
+          <p style={{ fontWeight: "700" }} className="text-center text-[#093FB4] text-xl mb-4 relative z-10">
             Trusted by 2 million+ teams
           </p>
         </div>
 
 
         {/* Logo Marquee Container */}
-        <div className="relative">
+        <div className="relative px-30">
           {/* Scrolling Logos */}
           <div
             className="flex items-center space-x-6"
@@ -492,11 +374,6 @@ const HeroSection = () => {
           <div className="absolute top-0 right-0 w-22 h-full bg-gradient-to-l from-black via-black to-transparent z-10 pointer-events-none" />
         </div>
 
-
-        {/* Bottom spacing */}
-        <div className="mt-12" />
-        {/* </div> */}
-
         {/* CSS Animation */}
         <style jsx>{`
         @keyframes marqueeRightToLeft {
@@ -514,35 +391,19 @@ const HeroSection = () => {
         }
       `}</style>
 
-        {/* <Marquee gradient={false} speed={70} pauseOnHover={true}>
-        {[...Array(2)].map((_, i) => (
-          <div key={i} className="flex gap-10 items-center">
-            <img src="/images/ipsum1.png" alt="logo1" className="h-16 w-32 object-contain opacity-50 hover:opacity-100 transition" />
-            <img src="/images/ipsum2.png" alt="logo2" className="h-16 w-32 object-contain opacity-50 hover:opacity-100 transition" />
-            <img src="/images/chart.png" alt="logo3" className="h-16 w-32 object-contain opacity-50 hover:opacity-100 transition" />
-            <img src="/images/calendar.jpeg" alt="logo4" className="h-16 w-32 object-contain opacity-50 hover:opacity-100 transition" />
-            <img src="/images/light.png" alt="logo5" className="h-16 w-32 object-contain opacity-50 hover:opacity-100 transition" />
-          </div>
-        ))}
-      </Marquee> */}
-
-
-        <div className="position-relative mt-20 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-          {/* <div className="absolute top-[20%] right-0 w-[300px] h-[300px] bg-[#0D5EA6] opacity-20 blur-[130px] z-0"></div> */}
-
+        <div className="position-relative mt-20 max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+          <div className="absolute top-10% right-0 w-[500px] h-[200px] bg-[#093FB4] opacity-20 blur-[130px] z-0"></div>
           <div className="max-w-xl">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">
               <span className="italic text-gray-300">Faster,</span> smarter Project <br /> Management
             </h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-[16px]">
               Our intuitive platform provides everything you need to efficiently<br></br> manage your projects,
               from real-time collaboration to detailed task <br></br>tracking.
             </p>
           </div>
-
-
           <div className="mt-10 md:mt-0 flex flex-col gap-4 w-full md:w-1/3">
-            {[20, 5, 15, 7].map((val, idx) => (
+            {[30].map((val, idx) => (
               <div
                 key={idx}
                 className="flex items-center gap-3 w-full rounded-full bg-white/5 h-10 overflow-hidden shadow-xl bg-gradient-to-tr from-[#0D5EA6]/50 via-[#1a1a1a] to-black shadow-md-[#633112] shadow-lg cursor-pointer pr-3 transition-colors duration-300"
@@ -552,16 +413,80 @@ const HeroSection = () => {
                   alt=""
                   className="w-8 h-8 rounded-full border border-white"
                 />
-                <div className="flex hover:bg-[#0D5EA6] hover:h-2 rounded-xl h-1 bg-[#0D5EA6]" style={{ width: `${val * 3}%` }}></div>
+                <div className="w-full">
+                  <div className="w-full h-1.5 rounded-full bg-gray-700">
+                    <div
+                      className="h-1.5 bg-[#0D5EA6] rounded-full transition-all duration-500"
+                      style={{ width: `${val * 3}%` }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+            {[10].map((val, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 rounded-full bg-white/5 h-10 overflow-hidden shadow-xl bg-gradient-to-tr from-[#0D5EA6]/50 via-[#1a1a1a] to-black shadow-md-[#633112] shadow-lg cursor-pointer pr-3 ml-20 transition-colors duration-300"
+              >
+                <img
+                  src="/images/image1.jpg"
+                  alt=""
+                  className="w-8 h-8 rounded-full border border-white"
+                />
+                <div className="w-full">
+                  <div className="w-full h-1.5 rounded-full bg-gray-700">
+                    <div
+                      className="h-1.5 bg-gray-600 rounded-full transition-all duration-500"
+                      style={{ width: `${val * 3}%` }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+            {[20].map((val, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 rounded-full bg-white/5 h-10 overflow-hidden shadow-xl bg-gradient-to-tr from-[#0D5EA6]/50 via-[#1a1a1a] to-black shadow-md-[#633112] shadow-lg cursor-pointer ml-10 pr-3 transition-colors duration-300"
+              >
+                <img
+                  src="/images/image1.jpg"
+                  alt=""
+                  className="w-8 h-8 rounded-full border border-white"
+                />
+                <div className="w-full">
+                  <div className="w-full h-1.5 rounded-full bg-gray-700">
+                    <div
+                      className="h-1.5 bg-[#0D5EA6] rounded-full transition-all duration-500"
+                      style={{ width: `${val * 3}%` }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+            {[20].map((val, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 w-full rounded-full bg-white/5 h-10 overflow-hidden shadow-xl bg-gradient-to-tr from-[#0D5EA6]/50 via-[#1a1a1a] to-black shadow-md-[#633112] shadow-lg cursor-pointer pr-3 transition-colors duration-300"
+              >
+                <img
+                  src="/images/image1.jpg"
+                  alt=""
+                  className="w-8 h-8 rounded-full border border-white"
+                />
+                <div className="w-full">
+                  <div className="w-full h-1.5 rounded-full bg-gray-700">
+                    <div
+                      className="h-1.5 bg-gray-600 rounded-full transition-all duration-500"
+                      style={{ width: `${val * 3}%` }}
+                    />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-
-        </div>
+        </div >
       </div>
-
-
-    </div >
+    </div>
   );
 };
 

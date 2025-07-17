@@ -1,6 +1,31 @@
 
 const FeatureSection = () => {
     // Generate globe dots
+    // const generateGlobeDots = (count) => {
+    //     const dots = [];
+    //     for (let i = 0; i < count; i++) {
+    //         const phi = Math.random() * Math.PI * 2;
+    //         const theta = Math.random() * Math.PI;
+    //         const x = Math.sin(theta) * Math.cos(phi);
+    //         const y = Math.sin(theta) * Math.sin(phi);
+    //         const z = Math.cos(theta);
+
+    //         if (z > -0.4) {
+    //             dots.push({
+    //                 id: i,
+    //                 x: x * 60 + 60,
+    //                 y: y * 60 + 60,
+    //                 z: z * 60 + 60,
+    //                 size: Math.random() * 2 + 1,
+    //                 opacity: (z + 1) * 0.4,
+    //                 delay: Math.random() * 3
+    //             });
+    //         }
+    //     }
+    //     return dots;
+    // };
+
+
     const generateGlobeDots = (count) => {
         const dots = [];
         for (let i = 0; i < count; i++) {
@@ -10,44 +35,41 @@ const FeatureSection = () => {
             const y = Math.sin(theta) * Math.sin(phi);
             const z = Math.cos(theta);
 
-            if (z > -0.4) {
-                dots.push({
-                    id: i,
-                    x: x * 60 + 60,
-                    y: y * 60 + 60,
-                    z: z,
-                    size: Math.random() * 2 + 1,
-                    opacity: (z + 1) * 0.4,
-                    delay: Math.random() * 3
-                });
-            }
+            dots.push({
+                id: i,
+                x: x * 60 + 60,
+                y: y * 60 + 60,
+                z: z * 60 + 60,
+                size: Math.random() * 2 + 1,
+                opacity: (z + 1) * 0.4,
+                delay: Math.random() * 3
+            });
         }
         return dots;
     };
 
-    const globeDots = generateGlobeDots(300);
+
+    const globeDots = generateGlobeDots(200);
 
     return (
-        <div className="min-h-screen p-8" style={{ padding: "0 200px 20px 200px", marginBottom: "50px" }}>
+        <div className="min-h-screen p-8" style={{ padding: "0 300px 20px 250px", marginBottom: "50px" }}>
             <div className="max-w-7xl mx-auto">
-                {/* Grid Layout - 3 columns, 2 rows */}
-                <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-6 h-[600px]">
 
-                    {/* Card 1: Real-Time Global Collaboration (2 cols, 2 rows) */}
-                    <div className="md:col-span-2 md:row-span-2 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 relative overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-4 h-[600px]">
+
+                    <div className="md:col-span-2 md:row-span-2 h-[300px] bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 relative overflow-hidden">
+
                         <div className="relative z-10">
                             <h3 className="text-2xl font-bold text-white mb-4">
                                 Real-Time Global Collaboration
                             </h3>
-                            <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                            <p className="text-gray-400 text-sm leading-relaxed mb-4">
                                 Collaborate seamlessly with teams across the globe. Stay connected and work together
                                 in real time, no matter where you are, ensuring everyone is always on the same page.
                             </p>
                         </div>
 
-                        {/* Globe Container */}
-                        <div className="relative w-48 h-48 mx-auto mt-8">
-                            {/* Main Globe */}
+                        <div className="relative w-68 h-68 mx-auto mt-4">
                             <div
                                 className="absolute inset-0 rounded-full"
                                 style={{
@@ -56,67 +78,56 @@ const FeatureSection = () => {
                     rgba(30, 30, 30, 0.9) 40%, 
                     rgba(15, 15, 15, 1) 100%)`,
                                     boxShadow: `
-                    inset -15px -15px 30px rgba(0, 0, 0, 0.8),
+                    inset -15px -15px 30px rgba(17, 16, 18, 0.8),
                     inset 15px 15px 30px rgba(255, 255, 255, 0.02),
                     0 0 30px rgba(100, 200, 255, 0.1)
                   `,
-                                    animation: 'globeRotate 25s linear infinite'
+                                    animation: 'globeRotate 55s linear infinite'
                                 }}
                             />
 
-                            {/* Globe Dots */}
                             <div
                                 className="absolute inset-0 rounded-full overflow-hidden"
                                 style={{ animation: 'globeRotate 25s linear infinite' }}
                             >
-                                {globeDots.map((dot) => (
+                                <div className="globe-wrapper" style={{ perspective: "800px" }}>
                                     <div
-                                        key={dot.id}
-                                        className="absolute rounded-full bg-blue-400"
+                                        className="globe-inner"
                                         style={{
-                                            left: `${dot.x}px`,
-                                            top: `${dot.y}px`,
-                                            width: `${dot.size}px`,
-                                            height: `${dot.size}px`,
-                                            opacity: dot.opacity,
-                                            boxShadow: '0 0 8px rgba(96, 165, 250, 0.6)',
-                                            animation: `dotPulse 4s ease-in-out infinite ${dot.delay}s`
+                                            width: "300px",
+                                            height: "300px",
+                                            position: "relative",
+                                            margin: "0 auto",
+                                            transformStyle: "preserve-3d",
+                                            animation: "globeRotate 45s linear infinite",
                                         }}
-                                    />
-                                ))}
-                            </div>
+                                    >
+                                        {/* {globeDots.map((dot) => (
+                                            <div
+                                                key={dot.id}
+                                                className="absolute rounded-full bg-blue-400"
+                                                style={{
+                                                    left: `${dot.x}px`,
+                                                    top: `${dot.y}px`,
+                                                    width: `${dot.size}px`,
+                                                    height: `${dot.size}px`,
+                                                    opacity: dot.opacity,
+                                                    boxShadow: '0 0 8px rgba(96, 165, 250, 0.6)'
+                                                }}
+                                            />
+                                        ))} */}
+                                    </div>
 
-                            {/* Orbital Rings */}
-                            <div
-                                className="absolute inset-0 rounded-full border border-blue-500/20"
-                                style={{
-                                    width: '120%',
-                                    height: '120%',
-                                    top: '-10%',
-                                    left: '-10%',
-                                    animation: 'orbitRotate 20s linear infinite'
-                                }}
-                            />
-                            <div
-                                className="absolute inset-0 rounded-full border border-purple-500/15"
-                                style={{
-                                    width: '140%',
-                                    height: '140%',
-                                    top: '-20%',
-                                    left: '-20%',
-                                    animation: 'orbitRotate 30s linear infinite reverse',
-                                    transform: 'rotateX(60deg)'
-                                }}
-                            />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Card 2: Advance Analytics (1 row, 1 col) */}
-                    <div className="md:col-span-1 md:row-span-1 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
+                    <div className="md:col-span-1 md:row-span-1 h-[180px] w-[290px] bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
                         <div className="h-full flex justify-between">
                             <div className="flex justify-center mt-4">
                                 <div
-                                    className="relative w-12 h-20 rounded-full overflow-hidden"
+                                    className="relative w-12 h-30 rounded-full overflow-hidden"
                                     style={{
                                         background: 'linear-gradient(180deg, #ff6b6b 0%, #ff8e53 50%, #ff6b6b 100%)',
                                         marginRight: "20px",
@@ -128,7 +139,7 @@ const FeatureSection = () => {
                                         animation: 'pillGlow 3s ease-in-out infinite'
                                     }}
                                 >
-                                    {/* Animated Fill */}
+
                                     <div
                                         className="absolute bottom-0 left-0 right-0 rounded-full"
                                         style={{
@@ -137,9 +148,8 @@ const FeatureSection = () => {
                                         }}
                                     />
 
-                                    {/* Highlight */}
                                     <div
-                                        className="absolute top-2 left-2 w-2 h-8 rounded-full opacity-40"
+                                        className="absolute top-2 left-2 w-2 h-12 rounded-full opacity-40"
                                         style={{
                                             background: 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, transparent 100%)'
                                         }}
@@ -158,31 +168,30 @@ const FeatureSection = () => {
                         </div>
                     </div>
 
-                    {/* Card 4: Sprint Planning (1 col, 2 rows) */}
-                    <div className="md:col-span-1 md:row-span-2 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
+
+                    <div className="md:col-span-1 md:row-span-2 w-[290px] mt-[-105px] h-[280px] bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
                         <div className="h-full flex flex-col justify-between">
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-3">
                                     Sprint Planning Made Simple
                                 </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                <p className="text-gray-400 text-sm leading-relaxed mb-2">
                                     Organize and structure your work in short, focused
                                     sprints. Track progress, hit goals, and deliver.
                                 </p>
 
-                                {/* Profile Icons */}
                                 <div className="flex space-x-2 mb-6">
                                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 border-2 border-gray-600" />
                                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-teal-500 border-2 border-gray-600" />
                                 </div>
                             </div>
 
-                            {/* 3D Lightning Bolt - Centered */}
                             <div className="flex justify-center">
                                 <div className="relative">
                                     <div
                                         className="w-16 h-20"
                                         style={{
+                                            marginTop: "-60px",
                                             background: 'linear-gradient(135deg, #ff6b6b 0%, #ff8e53 50%, #ffa726 100%)',
                                             clipPath: 'polygon(20% 0%, 80% 0%, 60% 40%, 100% 40%, 40% 100%, 0% 60%, 40% 60%)',
                                             boxShadow: `
@@ -194,10 +203,11 @@ const FeatureSection = () => {
                                         }}
                                     />
 
-                                    {/* Lightning Glow */}
+
                                     <div
                                         className="absolute inset-0 w-16 h-20"
                                         style={{
+                                            marginTop: "-50px",
                                             background: 'linear-gradient(135deg, rgba(255, 107, 107, 0.6) 0%, rgba(255, 142, 83, 0.4) 100%)',
                                             clipPath: 'polygon(20% 0%, 80% 0%, 60% 40%, 100% 40%, 40% 100%, 0% 60%, 40% 60%)',
                                             filter: 'blur(4px)',
@@ -209,11 +219,11 @@ const FeatureSection = () => {
                         </div>
                     </div>
 
-                    {/* Card 3: Seamless Integrations (1 row, 2 cols) */}
-                    <div className="md:col-span-2 md:row-span-1 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
+
+                    <div className="md:col-span-2 mt-[-280px] h-[150px] md:row-span-1 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
                         <div className="h-full flex items-center justify-between">
                             <div className="flex items-center space-x-6 flex-1">
-                                {/* 3D Calendar Icon */}
+
                                 <div className="relative">
                                     <div
                                         className="w-16 h-16 rounded-xl relative"
@@ -228,7 +238,6 @@ const FeatureSection = () => {
                                             animation: 'calendarFloat 3s ease-in-out infinite'
                                         }}
                                     >
-                                        {/* Calendar Header */}
                                         <div
                                             className="absolute top-1 left-1 right-1 h-2 rounded-t-lg"
                                             style={{
@@ -236,12 +245,11 @@ const FeatureSection = () => {
                                             }}
                                         />
 
-                                        {/* Calendar Number */}
                                         <div className="absolute inset-0 flex items-center justify-center">
                                             <span className="text-white text-lg font-bold mt-1">31</span>
                                         </div>
 
-                                        {/* Calendar Rings */}
+
                                         <div className="absolute -top-1 left-2 w-1 h-3 bg-gray-600 rounded-full" />
                                         <div className="absolute -top-1 right-2 w-1 h-3 bg-gray-600 rounded-full" />
                                     </div>
@@ -258,7 +266,7 @@ const FeatureSection = () => {
                                 </div>
                             </div>
 
-                            {/* Floating Connection Dots */}
+
                             <div className="relative ml-4">
                                 {[...Array(6)].map((_, i) => (
                                     <div
@@ -280,36 +288,15 @@ const FeatureSection = () => {
 
             {/* Custom CSS Animations */}
             <style jsx>{`
+    
         @keyframes globeRotate {
-          from { transform: rotateY(0deg); }
-          to { transform: rotateY(360deg); }
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
         }
-
-        @keyframes orbitRotate {
-          from { transform: rotateZ(0deg); }
-          to { transform: rotateZ(360deg); }
-        }
-
-        @keyframes dotPulse {
-          0%, 100% { opacity: 0.3; transform: scale(1); }
-          50% { opacity: 0.8; transform: scale(1.3); }
-        }
-
-        @keyframes pillGlow {
-          0%, 100% { 
-            box-shadow: 
-              inset -4px 0 8px rgba(0, 0, 0, 0.3),
-              inset 4px 0 8px rgba(255, 255, 255, 0.1),
-              0 0 20px rgba(255, 107, 107, 0.3);
-          }
-          50% { 
-            box-shadow: 
-              inset -4px 0 8px rgba(0, 0, 0, 0.3),
-              inset 4px 0 8px rgba(255, 255, 255, 0.1),
-              0 0 30px rgba(255, 107, 107, 0.5);
-          }
-        }
-
         @keyframes fillUp {
           0% { height: 30%; }
           50% { height: 80%; }

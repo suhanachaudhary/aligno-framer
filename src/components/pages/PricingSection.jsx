@@ -19,7 +19,7 @@ const PricingSection = () => {
   return (
     <>
       <div className=" relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
-
+        <div className="absolute top-[20%] right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[120px] z-0"></div>
         <div className="max-w-6xl mx-auto mt-20">
           {/* Header */}
           <div className="text-center mb-16">
@@ -257,7 +257,8 @@ const PricingSection = () => {
 
 
 
-      <div className="bg-black text-white py-20 px-6 flex flex-col items-center">
+      <div className="relative bg-black text-white py-20 px-6 flex flex-col items-center">
+        <div className="absolute top-[20%] left-0 w-[300px] h-[300px] bg-[#093FB4] opacity-20 blur-[130px] z-0"></div>
         <h2 className="text-3xl md:text-5xl font-semibold text-center mb-4">
           How <span className="italic text-[#093FB4]">Corazor</span> helps you?
         </h2>
