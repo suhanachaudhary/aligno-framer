@@ -22,7 +22,7 @@ const SplashScreen = () => {
             <div className="text-center">
                 <h1 className={`text-white text-6xl font-light mb-6 transition-all duration-2000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
-                    Ready to <span className="italic font-light">Corazor</span>
+                    Ready to <span className="italic font-light font-bold">Corazor</span>
                 </h1>
 
                 {/* Elegant underline */}

@@ -269,7 +269,8 @@ const HeroSection = () => {
                   ))}
                 </div>
               </button>
-              <div className="mt-[-60px]">
+
+              <div className="mt-[-40px]">
                 <Dashboard1 />
               </div>
 

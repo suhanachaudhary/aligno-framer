@@ -1,55 +1,5 @@
 
 const FeatureSection = () => {
-    // Generate globe dots
-    // const generateGlobeDots = (count) => {
-    //     const dots = [];
-    //     for (let i = 0; i < count; i++) {
-    //         const phi = Math.random() * Math.PI * 2;
-    //         const theta = Math.random() * Math.PI;
-    //         const x = Math.sin(theta) * Math.cos(phi);
-    //         const y = Math.sin(theta) * Math.sin(phi);
-    //         const z = Math.cos(theta);
-
-    //         if (z > -0.4) {
-    //             dots.push({
-    //                 id: i,
-    //                 x: x * 60 + 60,
-    //                 y: y * 60 + 60,
-    //                 z: z * 60 + 60,
-    //                 size: Math.random() * 2 + 1,
-    //                 opacity: (z + 1) * 0.4,
-    //                 delay: Math.random() * 3
-    //             });
-    //         }
-    //     }
-    //     return dots;
-    // };
-
-
-    const generateGlobeDots = (count) => {
-        const dots = [];
-        for (let i = 0; i < count; i++) {
-            const phi = Math.random() * Math.PI * 2;
-            const theta = Math.random() * Math.PI;
-            const x = Math.sin(theta) * Math.cos(phi);
-            const y = Math.sin(theta) * Math.sin(phi);
-            const z = Math.cos(theta);
-
-            dots.push({
-                id: i,
-                x: x * 60 + 60,
-                y: y * 60 + 60,
-                z: z * 60 + 60,
-                size: Math.random() * 2 + 1,
-                opacity: (z + 1) * 0.4,
-                delay: Math.random() * 3
-            });
-        }
-        return dots;
-    };
-
-
-    const globeDots = generateGlobeDots(200);
 
     return (
         <div className="min-h-screen p-8" style={{ padding: "0 300px 20px 250px", marginBottom: "50px" }}>
@@ -74,15 +24,16 @@ const FeatureSection = () => {
                                 className="absolute inset-0 rounded-full"
                                 style={{
                                     background: `radial-gradient(circle at 30% 30%, 
-                    rgba(60, 60, 60, 0.8) 0%, 
-                    rgba(30, 30, 30, 0.9) 40%, 
-                    rgba(15, 15, 15, 1) 100%)`,
+                                        rgba(25, 25, 35, 0.9) 0%, 
+                                        rgba(11, 13, 14, 0.8) 50%, 
+                                        rgba(240, 240, 255, 0.1) 100%)`,
                                     boxShadow: `
-                    inset -15px -15px 30px rgba(17, 16, 18, 0.8),
-                    inset 15px 15px 30px rgba(255, 255, 255, 0.02),
-                    0 0 30px rgba(100, 200, 255, 0.1)
-                  `,
-                                    animation: 'globeRotate 55s linear infinite'
+                                        inset -15px -15px 50px rgba(20, 20, 30, 0.8),
+                                        inset 15px 15px 30px rgba(255, 255, 255, 0.05),
+                                        10px 10px 30px rgba(100, 200, 255, 0.1)
+                                        `,
+
+                                    animation: 'globeRotate 35s linear infinite'
                                 }}
                             />
 
@@ -102,27 +53,11 @@ const FeatureSection = () => {
                                             animation: "globeRotate 45s linear infinite",
                                         }}
                                     >
-                                        {/* {globeDots.map((dot) => (
-                                            <div
-                                                key={dot.id}
-                                                className="absolute rounded-full bg-blue-400"
-                                                style={{
-                                                    left: `${dot.x}px`,
-                                                    top: `${dot.y}px`,
-                                                    width: `${dot.size}px`,
-                                                    height: `${dot.size}px`,
-                                                    opacity: dot.opacity,
-                                                    boxShadow: '0 0 8px rgba(96, 165, 250, 0.6)'
-                                                }}
-                                            />
-                                        ))} */}
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div className="md:col-span-1 md:row-span-1 h-[180px] w-[290px] bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
                         <div className="h-full flex justify-between">
                             <div className="flex justify-center mt-4">
@@ -168,7 +103,6 @@ const FeatureSection = () => {
                         </div>
                     </div>
 
-
                     <div className="md:col-span-1 md:row-span-2 w-[290px] mt-[-105px] h-[280px] bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
                         <div className="h-full flex flex-col justify-between">
                             <div>
@@ -185,7 +119,6 @@ const FeatureSection = () => {
                                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-teal-500 border-2 border-gray-600" />
                                 </div>
                             </div>
-
                             <div className="flex justify-center">
                                 <div className="relative">
                                     <div
@@ -202,8 +135,6 @@ const FeatureSection = () => {
                                             animation: 'lightningPulse 2s ease-in-out infinite'
                                         }}
                                     />
-
-
                                     <div
                                         className="absolute inset-0 w-16 h-20"
                                         style={{
@@ -218,8 +149,6 @@ const FeatureSection = () => {
                             </div>
                         </div>
                     </div>
-
-
                     <div className="md:col-span-2 mt-[-280px] h-[150px] md:row-span-1 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 relative overflow-hidden">
                         <div className="h-full flex items-center justify-between">
                             <div className="flex items-center space-x-6 flex-1">
@@ -248,13 +177,10 @@ const FeatureSection = () => {
                                         <div className="absolute inset-0 flex items-center justify-center">
                                             <span className="text-white text-lg font-bold mt-1">31</span>
                                         </div>
-
-
                                         <div className="absolute -top-1 left-2 w-1 h-3 bg-gray-600 rounded-full" />
                                         <div className="absolute -top-1 right-2 w-1 h-3 bg-gray-600 rounded-full" />
                                     </div>
                                 </div>
-
                                 <div className="flex-1">
                                     <h3 className="text-xl font-bold text-white mb-2">
                                         Seamless Integrations with Your Favorite Tools
@@ -265,8 +191,6 @@ const FeatureSection = () => {
                                     </p>
                                 </div>
                             </div>
-
-
                             <div className="relative ml-4">
                                 {[...Array(6)].map((_, i) => (
                                     <div
@@ -285,18 +209,17 @@ const FeatureSection = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Custom CSS Animations */}
             <style jsx>{`
     
         @keyframes globeRotate {
             from {
-                transform: rotateY(0deg);
+                transform: rotateZ(0deg);
             }
             to {
-                transform: rotateY(360deg);
+                transform: rotateZ(360deg);
             }
         }
+
         @keyframes fillUp {
           0% { height: 30%; }
           50% { height: 80%; }
@@ -340,6 +263,15 @@ const FeatureSection = () => {
             transform: scale(1.5);
           }
         }
+          @keyframes floatBox {
+  0%, 100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateZ(15deg);
+  }
+}
+
       `}</style>
         </div>
     );
