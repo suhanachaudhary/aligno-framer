@@ -1,7 +1,8 @@
 
 function Collaborate() {
     return (
-        <div className="bg-[#0f172a] text-white px-6 md:px-20 py-20 space-y-24">
+        <div className="bg-[#000] relative text-white px-6 md:px-20 py-20 space-y-24">
+            <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
 
             <section className="max-w-5xl mx-auto text-center">
                 <h2 className="md:text-5xl text-4xl font-bold mb-6 mt-20">Why Work with Corazor?</h2>
@@ -38,7 +39,8 @@ function Collaborate() {
                 </div>
             </section>
 
-            <section className="text-center space-y-6">
+            <section className="text-center space-y-6 relative">
+                <div className="absolute top-0 left-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
                 <h3 className="text-3xl font-bold">Ready to Transform Your Vision?</h3>
                 <p className="text-lg text-gray-300">Let’s craft something amazing together.</p>
 

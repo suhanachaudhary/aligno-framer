@@ -27,8 +27,9 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white px-6 py-20 lg:px-32 min-h-screen">
+        <div className="bg-[#000] relative text-white px-6 py-20 lg:px-32 min-h-screen">
 
+            <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
             <motion.div
                 className="text-center mb-16"
                 initial={{ opacity: 0, y: 20 }}
@@ -115,11 +116,12 @@ const ContactPage = () => {
             </div>
 
             <motion.div
-                className="max-w-4xl mx-auto"
+                className="relative max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
+                <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
                 <h3 className="text-3xl font-semibold mb-6 text-center">FAQs</h3>
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (

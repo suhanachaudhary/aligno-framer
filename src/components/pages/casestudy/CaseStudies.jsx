@@ -66,7 +66,8 @@ const CaseStudies = () => {
     const [activeStudy, setActiveStudy] = useState(null);
 
     return (
-        <section className="w-full py-20 px-6 bg-[#0f0f0f] text-white">
+        <section className="relative w-full py-20 px-6 bg-[#000] text-white">
+            <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-4xl md:text-5xl mt-10 font-bold mb-12 text-center">
                     Proof, not promises.
@@ -115,7 +116,9 @@ const CaseStudies = () => {
                 )}
             </div>
 
-            <div className="text-center md:px-20 px-6 mt-30 mx-auto mb-12">
+            <div className="relative text-center md:px-20 px-6 mt-30 mx-auto mb-12">
+                <div className="absolute top-0 left-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
+                <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
                 <h2 className="text-4xl font-bold mb-10 text-white">Our Success Stories</h2>
                 <div className="max-w-8xl mx-auto">
                     <Slider {...sliderSettings}>

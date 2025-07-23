@@ -67,8 +67,8 @@ const events = [
 
 const Resources = () => {
     return (
-        <div className="px-6 md:px-20 py-16 bg-black text-white">
-            {/* Heading */}
+        <div className="relative px-6 md:px-20 py-16 bg-black text-white">
+            <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
             <div className="text-center mb-12">
                 <h1 className="md:text-5xl text-4xl font-bold mb-4 mt-20">Resources</h1>
                 <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -76,6 +76,8 @@ const Resources = () => {
                 </p>
             </div>
 
+
+            <div className="absolute top-[40%] right-[50%] w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
             {/* Blog Section */}
             <section className="mb-20">
                 <h2 className="text-3xl font-semibold mb-6 flex items-center gap-2">

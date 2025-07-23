@@ -27,9 +27,12 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div className="bg-black text-white">
+        <div className="relative bg-black text-white">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
 
-            <section className="py-20 px-6 text-center bg-black text-white">
+            <section className="relative py-20 px-6 text-center bg-black text-white">
+
+                <div className="absolute top-[40%] right-[40%] w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 mt-20">Our Mission</h2>
                 <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-10">
                     At Corazor, we believe in building tech that empowers people. Our mission is to solve real-world problems with simple, elegant solutions that scale.
@@ -54,7 +57,8 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            <section className="py-20 px-6 bg-black">
+            <section className="relative py-20 px-6 bg-black">
+                <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
                 <h3 className="text-4xl md:text-5xl text-white font-semibold text-center mb-10">
                     Meet Our Team
                 </h3>

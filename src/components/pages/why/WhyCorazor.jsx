@@ -43,9 +43,9 @@ function WhyCorazor() {
 
     return (
         <div className="min-h-screen">
-            <section className="relative pt-50 pb-16 bg-gradient-to-b from-black to-gray-900 text-white flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
-                <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
+            <section className="relative pt-50 pb-16 bg-black text-white flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
+                <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#093FB4] opacity-20 blur-[150px] z-1"></div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     We Speak <span className="text-blue-500">Code</span>. But Think Like <span className="text-pink-400">Founders</span>.
                 </h1>

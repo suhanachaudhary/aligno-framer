@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaLaptopCode, FaMobileAlt, FaBrain, FaCube } from "react-icons/fa";
 import CardSwap, { Card } from './CardSwap'
 import TechStack from "./TechStack";
+import { Link } from "react-router-dom";
 const solutions = [
     { title: "Web Development", icon: <FaLaptopCode className="text-5xl text-blue-400" /> },
     { title: "App Development", icon: <FaMobileAlt className="text-5xl text-green-400" /> },
@@ -182,7 +183,7 @@ export default function Solution() {
                 <p className="text-gray-400 mb-8 text-xl">Book a free call or browse our case studies to see our impact.</p>
                 <div className="flex flex-col sm:flex-row justify-center gap-6">
                     <a href="#" className="bg-blue-600 px-6 py-3 rounded-full hover:bg-blue-700 transition">📞 Book a Strategy Call</a>
-                    <a href="#" className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">📂 View Case Study</a>
+                    <Link to="/study" className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">📂 View Case Study</Link>
                 </div>
             </section>
         </div>
